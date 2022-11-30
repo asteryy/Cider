@@ -1,0 +1,347 @@
+@charset "UTF-8";
+@import url(reset.css);
+
+:root{
+    --lGreen: #00a651;
+    --dGreen: #009640;
+}
+
+.container{width: 1200px; margin: 0 auto;}
+
+
+.history{padding-top: 200px;}
+.history_story{}
+
+
+.history_title{text-align: center;}
+.history_title h2{
+    font-size: 50px; font-weight: 700;
+    line-height: 60px; color: #222;
+}
+.history_title h2 em{color: var(--lGreen);}
+
+
+.history_btn{}
+.history_btn ul{
+    width: 52%; text-align: center;
+    margin: 100px auto;  /* 블록요소인 내자신을 가운데에 정렬하는 방법 */
+}
+.history_btn ul li{
+    float: left; width: 20%;
+    margin-left: -1px; /* border가 1px씩 더해지면서 생긴 2px을 다시 1px로 바꿔줌 */
+}
+.history_btn ul li a{
+    display: block;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+}
+.history_btn ul li.active a{
+    background: var(--lGreen); border-color: var(--dGreen);
+    font-weight: bold; color: #fff;}
+
+.history_slide_Wrap{margin-top: -98px;}
+.history_slide{}
+.history_slide img{width: 100%; height: 100%;}
+
+.history_slide .slick-arrow{
+    position: absolute;
+    bottom: 6px;
+    font-size: 0; line-height: 0;
+    background: none;
+    z-index: 100;
+}
+.history_slide .slick-prev{left: 40%;}
+.history_slide .slick-prev:after{
+    content: "\f30a";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 30px;
+    padding: 5px 6px;
+    border-radius: 50%;
+}
+.history_slide .slick-prev:hover:after{
+    background: var(--lGreen); color: #fff;
+}
+.history_slide .slick-next{right: 40%;}
+.history_slide .slick-next:after{
+    content: "\f30b";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 30px;
+    padding: 5px 6px;
+    border-radius: 50%;
+}
+.history_slide .slick-next:hover:after{
+    background: var(--lGreen); color: #fff;
+}
+
+
+.history_page{
+    text-align: center; margin-top: -35px;
+    position: relative; z-index: 90;    
+}
+.history_page em{}
+.history_page strong{color: #222;}
+
+
+/* history_poster */
+.history_poster{
+    padding-top: 100px;
+    background: #f7f7f7;}
+.poster_title{}
+.poster_title h2{
+    font-size: 56px;
+    line-height: 66px;
+    text-align: center;
+    font-weight: 700;
+    color: #222;
+    padding: 50px 0;
+}
+
+.poster_btn{}
+.poster_btn ul{width: 40%; margin: 0 auto;}  /* 정중앙에 정렬 */
+.poster_btn ul li{
+    float: left; width: 25%;
+    text-align: center;
+}
+.poster_btn ul li a{
+    display: block; padding: 5px 0;
+    letter-spacing: -1px;
+}
+.poster_btn ul li.active2 a{
+    position: relative;
+    color:var(--lGreen)
+}
+.poster_btn ul li.active2 a:before{
+    content: ''; position: absolute;
+    left: 50%; transform: translateX(-50%);
+    bottom: 0; width: 60%; height: 3px;
+    background: var(--lGreen);
+}
+
+
+/* poster_cont */
+.poster_cont{
+    position: relative;
+    height: 950px; 
+}
+.poster_cont .poster{
+    position: absolute;
+    left:50%; top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%; height: 60%;
+}
+.poster_cont .poster figure{
+    position: absolute;
+    width: 20%;
+    transition: 0.5s;
+}
+.poster_cont .poster figure img{
+    border: 8px solid #ccc;
+    transition: 0.3s;
+    display: block;  /* 예측하지 못한 공간이 생기는 걸 방지 */
+}
+.poster_cont .poster figure:hover img{
+    border-color: var(--lGreen);
+    cursor: pointer; /* 마우스 커서 모양 바꾸기 */
+    box-shadow: 7px 7px 15px rgba(0,0,0,0.2);
+}
+.poster_cont .poster figure figcaption{
+    text-align: center; font-weight: 700;
+    transition: 0.3s;
+}
+.poster_cont .poster figure:hover figcaption{
+    font-weight: 900; color: var(--dGreen);
+    font-size: 20px;
+}
+
+
+.poster_cont .poster.po1{}
+.poster_cont .poster.po1 figure:nth-child(1){width: 54%; left: -5%; top: -10%;}
+.poster_cont .poster.po1 figure:nth-child(2){width: 42%; left: 55%; top: -17%;}
+.poster_cont .poster.po1 figure:nth-child(3){width: 46%; left: 10%; top: 38%;}
+.poster_cont .poster.po1 figure:nth-child(4){width: 33%; left: 67%; top: 38%;}
+.poster_cont .poster.po1 figure.move:nth-child(1){left: 0%; top: -10%;}
+.poster_cont .poster.po1 figure.move:nth-child(2){left: 60%; top: -17%;}
+.poster_cont .poster.po1 figure.move:nth-child(3){left: 7%; top: 33%;}
+.poster_cont .poster.po1 figure.move:nth-child(4){left: 63%; top: 38%;}
+
+
+.poster_cont .poster.po2 figure:nth-child(1){width: 50%; left: 0%; top: -14%;}
+.poster_cont .poster.po2 figure:nth-child(2){width: 65%; left: 62%; top: -2%;}
+.poster_cont .poster.po2 figure:nth-child(3){width: 39%; left: 7%; top: 50%;}
+.poster_cont .poster.po2 figure:nth-child(4){width: 52%; left: 52%; top:52%}
+.poster_cont .poster.po2 figure.move:nth-child(1){left: 0%; top: -10%;}
+.poster_cont .poster.po2 figure.move:nth-child(2){left: 57%; top: -2%;}
+.poster_cont .poster.po2 figure.move:nth-child(3){left: 9%; top: 44%;}
+.poster_cont .poster.po2 figure.move:nth-child(4){left: 53%; top: 48%}
+
+
+.poster_cont .poster.po3 figure:nth-child(1){left:-1%; top:-10%; width:56%;}
+.poster_cont .poster.po3 figure:nth-child(2){left:50%; top:-4%; width:62%;}
+.poster_cont .poster.po3 figure:nth-child(3){left:-14%; top:39%; width:38%;}
+.poster_cont .poster.po3 figure:nth-child(4){left:36%; top:40%; width:34%;}
+.poster_cont .poster.po3 figure:nth-child(5){left:82%; top:50%; width:54%;}
+.poster_cont .poster.po3 figure.move:nth-child(1){left:-6%; top:-17%; width:56%;}
+.poster_cont .poster.po3 figure.move:nth-child(2){left:56%; top:-10%; width:62%;}
+.poster_cont .poster.po3 figure.move:nth-child(3){left:-8%; top:37%; width:38%;}
+.poster_cont .poster.po3 figure.move:nth-child(4){left:36%; top:33%; width:34%;}
+.poster_cont .poster.po3 figure.move:nth-child(5){left:75%; top:46%; width:54%;}
+
+
+.poster_cont .poster.po4 figure:nth-child(1){left:-7%; top:-12%; width:49%;}
+.poster_cont .poster.po4 figure:nth-child(2){left:60%; top:0%; width:46%;}
+.poster_cont .poster.po4 figure:nth-child(3){left:0%; top:56%; width:51%;}
+.poster_cont .poster.po4 figure.move:nth-child(1){left:-2%; top:-12%; width:49%;}
+.poster_cont .poster.po4 figure.move:nth-child(2){left:55%; top:0%; width:46%;}
+.poster_cont .poster.po4 figure.move:nth-child(3){left:0%; top:41%; width:51%;}
+
+
+/* history_cider */
+.history_cider{padding: 200px 0;}
+.history_cider .container{position: relative;}
+.cider_title{padding-bottom: 30px;}
+.cider_title h2{
+    font-size: 45px; text-align: center;
+    line-height: 55px; color: #222;
+    font-weight: 500;}
+.cider_title h2 em{font-weight: 700;}
+
+.history_cider .circle{
+    position: absolute;
+    width: 480px; height: 480px;
+    left: 50%; top: 20%;
+    transform: translateX(-50%);
+}
+.history_cider .circle span{
+    position: absolute;
+    width: 100%; height: 100%;
+    background: var(--dGreen);
+    border-radius: 50%;
+}
+.history_cider .circle span:nth-child(1){
+    opacity: 0.9;
+}
+.history_cider .circle span:nth-child(2){
+    width: 30px; height: 30px; left: 10px; top: 20px;
+}
+.history_cider .circle span:nth-child(3){
+    width: 40px; height: 40px; left: 40px; top: 50px;
+    background-color: transparent;
+    border: 2px solid var(--lGreen);
+    box-shadow: 2px 2px 2px rgb(255,255,255,0.2);
+}
+.history_cider .circle span:nth-child(4){
+    width: 20px; height: 20px; left: 65px; top: 15px;
+    background-color: transparent;
+    border: 2px solid var(--lGreen);   
+}
+.history_cider .circle span:nth-child(5){
+    width: 20px; height: 20px; right: 25px; bottom: 30px;
+}
+
+
+/* cider_bottle */
+.cider_bottle{ height: 70vh; perspective: 600px;}
+.bSlide{
+    position: relative; height: 700px;
+    transform-style: preserve-3d;}
+.bSlide .bottle{
+    position: absolute;
+    left: 50%; top: 0; transform: translateX(-50%);
+    width: 50%; transform-style: preserve-3d;
+}
+.bSlide .bottle img{
+    width: auto;
+    display: block; margin: 0 auto;
+    opacity: 0.5;
+    transform: translateZ(-200px) scale(0.8);
+    transition: 0.5s;
+}
+.bSlide.slick-active .bottle img{
+    transform: translateZ(50px) scale(1);
+    opacity: 1; transition-delay: 0.3s;
+    
+}
+
+.bSlide .bottle .desc{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+    width: 220%; text-align: center;
+    margin-top: 50px;
+    transition: 0.3s;
+}
+.bSlide .bottle .desc p{
+    font-weight: 400;
+    padding-top: 15px;}
+.bSlide.slick-active .bottle .desc{
+    transform: translateX(-50%) scale(1);
+    opacity: 1; transition-delay: 0.3s;
+}
+
+.bSlide .bottle_text{
+    position: absolute;
+    left: 50%; transform: translate3d(-50%,17%,-200px);
+}
+.bSlide .bottle_text h2{
+    font-size: 200px; font-weight: 900;
+    color: #fff;
+    text-shadow: 10px 10px 12px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.2s;
+}
+.bSlide.slick-active .bottle_text h2{
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.4s;
+}
+
+
+/* slick 재생 버튼 */
+.cider_bottle .slick-arrow{
+    position: absolute; bottom: 14%;
+    font-size: 0; line-height: 0;
+    cursor: pointer;
+    background: none;
+    z-index: 100;
+}
+
+.cider_bottle .slick-prev{left: 20%}
+.cider_bottle .slick-prev:after{
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 50px; color: #222;
+}
+
+.cider_bottle .slick-next{right: 20%}
+.cider_bottle .slick-next:after{
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 50px; color: #222;
+}
+
+
+.cider_bottle .slick-dots{
+    width: 130px; margin: 0 auto;
+    bottom: 80px; position: relative;
+}
+.cider_bottle .slick-dots li{
+    float: left; margin: 0 5px;
+    width: 12px; height: 12px;
+    background: #dedede; cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.cider_bottle .slick-dots li.slick-active{
+    width: 30px; border-radius: 5px;
+    background: var(--lGreen);
+}
+
+.cider_bottle .slick-dots li button{
+    font-size: 0; line-height: 0; background: none;
+}
